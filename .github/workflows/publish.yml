@@ -1,0 +1,26 @@
+name: Publish to pub.dev
+
+on:
+  push:
+    tags:
+      - 'v[0-9]+.[0-9]+.[0-9]+*'
+
+jobs:
+  publish:
+    name: Publish
+    runs-on: ubuntu-latest
+    environment: pub.dev
+    permissions:
+      # Required to authenticate on pub.dev through OIDC.
+      id-token: write
+    steps:
+      - uses: actions/checkout@v5
+      # Configures the OIDC token used by `dart pub publish`.
+      - uses: dart-lang/setup-dart@v1
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+      - run: flutter pub get
+      - run: flutter test
+      - run: dart pub publish --force

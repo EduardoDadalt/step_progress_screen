@@ -1,0 +1,26 @@
+name: step_progress_screen
+description: >-
+  A blocking, full-screen progress view that runs async steps in sequence,
+  with retry, fatal errors and error details.
+version: 0.1.0
+repository: https://github.com/EduardoDadalt/step_progress_screen
+issue_tracker: https://github.com/EduardoDadalt/step_progress_screen/issues
+topics:
+  - progress
+  - stepper
+  - loading
+  - widget
+  - ui
+
+environment:
+  sdk: ^3.8.0
+  flutter: ">=3.32.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_lints: ^6.0.0
+  flutter_test:
+    sdk: flutter

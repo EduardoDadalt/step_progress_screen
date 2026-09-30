@@ -1,0 +1,21 @@
+name: step_progress_screen_example
+description: "Example app for step_progress_screen."
+publish_to: none
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.8.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  step_progress_screen:
+    path: ..
+
+dev_dependencies:
+  flutter_lints: ^6.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
